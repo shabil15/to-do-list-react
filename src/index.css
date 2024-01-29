@@ -1,4 +1,6 @@
 .to-do-list{
+  display: flex;
+  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-top: 100px;
@@ -6,6 +8,7 @@
 }
 h1{
   font-size: 4rem;
+  font-family: poppins;
 }
 
 
@@ -19,9 +22,10 @@ input [type="text"]{
 }
 
 body {
-  display: flex;
-  justify-content: center;
+ 
+
   
+
   background: url("assets/photo-1519681393784-d120267933ba.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -33,7 +37,7 @@ body {
 
 
 .container {
- 
+  
   backdrop-filter: blur(7px) saturate(180%);
   -webkit-backdrop-filter: blur(7px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
@@ -41,6 +45,88 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.125);
   text-align: center;
 }
-li      {
-  list-style: none;   
+button{
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.delete-button{
+  background-color: hsl(0, 0%, 100%); 
+  color: white;
+}
+
+.delete-button:hover{
+  background-color: hsl(60, 24%, 7%);
+}
+
+.move-button{
+  background-color: hsl(207, 90%, 64%);
+}
+
+.move-button:hover{
+  background-color: hsl(210, 23%, 5%);;
+}
+
+.add-input{
+  font-size: 1.9rem;
+  padding: 10px;
+  border: 2px solid hsl(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.save-input{
+  font-weight: bold;
+  font-size: large;
+  margin-left: 15px;
+  align-items: center;
+  border: none;
+}
+
+ol{ 
+  padding: 0;
+  margin: 0 auto; 
+  width: fit-content;
+}
+
+li{
+  margin-top: 1.7rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease-in-out;
+
+}
+li:hover{
+  background-color: rgb(177, 241, 230);
+  transform: scale(1.1);
+}
+
+
+.text{
+  flex: 1;
+}
+.add-input{
+  font-size: 1.3rem;
+  padding: 10px;
+  border: 2px solid hsl(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  
+}
+.button-img{
+  height: 30px;
 }

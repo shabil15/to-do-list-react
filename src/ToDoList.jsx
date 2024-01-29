@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
 function ToDoList() {
-  const [tasks, setTasks] = useState([
-    "Eat BreakFast",
-    "Take shower",
-    "Eat the dinner",
-  ]);
+  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
   function HandleInputChange(event) {
@@ -31,13 +27,14 @@ function ToDoList() {
       <div>
         <input
           type="text"
+          className = 'add-input'
           placeholder="Enter a Task..."
           value={newTask}
           onChange={HandleInputChange}
         />
 
         <button className="add-button" onClick={addTask}>
-          Add
+        <img className="button-img" src="src/assets/icons8-add-button-60.png"></img>
         </button>
       </div>
 
@@ -46,16 +43,16 @@ function ToDoList() {
           <li key={index}>
             <span className="text">{task}</span>
             <button className="delete-button" onClick={() => deleteTask(index)}>
-              Delete
+            <img className="button-img" src="src/assets/icons8-trash-can-96.png"></img>
             </button>
             <button className="moveUp-button" onClick={() => moveTaskUp(index)}>
-              UP
+            <img className="button-img" src="src/assets/icons8-up-64.png"></img>
             </button>
             <button
               className="moveDown-button"
               onClick={() => moveTaskDown(index)}
             >
-              Down
+              <img className="button-img" src="src/assets/icons8-down-64.png"></img>
             </button>
           </li>
         ))}
