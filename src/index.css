@@ -1,14 +1,17 @@
 .to-do-list{
-  display: flex;
-  justify-content: center;
+  
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-top: 100px;
+  width: 80%;
+  margin: auto;
+  font-family: "Poppins",sans-serif;
   
 }
 h1{
   font-size: 4rem;
-  font-family: poppins;
+  font-family: "Poppins",sans-serif;
+  color: white;
 }
 
 
@@ -37,20 +40,21 @@ body {
 
 
 .container {
-  
   backdrop-filter: blur(7px) saturate(180%);
   -webkit-backdrop-filter: blur(7px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   text-align: center;
+  width: 100%; 
+  max-width: 900px;
+  min-height: 500px;
+  margin: 0 auto; 
 }
 button{
   font-size: 1.4rem;
   font-weight: bold;
-  padding: 10px 20px;
-  color: white;
-  margin-left: 10px;
+  margin-left: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -58,12 +62,12 @@ button{
 }
 
 .delete-button{
-  background-color: hsl(0, 0%, 100%); 
+  background-color: hsl(0, 3%, 36%); 
   color: white;
 }
 
 .delete-button:hover{
-  background-color: hsl(60, 24%, 7%);
+  background-color: hsl(0, 0%, 98%);
 }
 
 .move-button{
@@ -73,14 +77,20 @@ button{
 .move-button:hover{
   background-color: hsl(210, 23%, 5%);;
 }
-
+.edit-button{
+  background-color: white;
+}
+.edit-button:hover{
+  background-color: rgb(108, 104, 104);
+}
 .add-input{
-  font-size: 1.9rem;
-  padding: 10px;
+  font-size: 1.7rem;
+  padding: 5px;
   border: 2px solid hsl(0, 0%, 80%, 0.5);
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
 
 .save-input{
   font-weight: bold;
@@ -103,22 +113,29 @@ li{
   padding: 12px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: hsl(0, 0%, 97%);
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
   margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
+  color: aliceblue;
   align-items: center;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 
 }
 li:hover{
-  background-color: rgb(177, 241, 230);
+  background-color: rgb(255, 255, 255);
   transform: scale(1.1);
+  color: black;
+  transition: .5s;
 }
 
 
 .text{
   flex: 1;
+}
+.edit-input{
+  font-size: 1.2rem;
 }
 .add-input{
   font-size: 1.3rem;
@@ -129,4 +146,7 @@ li:hover{
 }
 .button-img{
   height: 30px;
+}
+.text{
+  margin-right: 50px;
 }
